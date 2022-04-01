@@ -1,0 +1,88 @@
+.reviews {
+  padding: 80px 0;
+  background-color: #fff4dd;
+  overflow: hidden;
+}
+.wrapper-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reviews-content {
+  margin-bottom: 50px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 460px 460px;
+  justify-content: center;
+}
+.reviews-item {
+  transform: translate(120%, 0);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+  &__text {
+    margin-bottom: 32px;
+    padding: 37px 40px 46px 58px;
+    background-color: #ffc656;
+    border-radius: 16px;
+    font-family: "Futura PT";
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: #333333;
+    position: relative;
+  }
+  &__text::after {
+    content: url(/src/assets/images/thought.svg);
+    position: absolute;
+    width: 23px;
+    height: 20px;
+    bottom: -20px;
+    left: 75px;
+  }
+  &__profile {
+    display: flex;
+    &-photo {
+      margin-right: 25px;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-name {
+      font-family: "Futura PT";
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: 0.02em;
+      color: #333333;
+    }
+    &-link {
+      font-family: "Futura PT";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: 0.02em;
+      color: #333333;
+      a {
+        color: #1b48e9;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.reviews-item.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+@media (max-width: 1080px) {
+  .reviews-content {
+    grid-template-columns: 560px;
+  }
+}
+@media (max-width: 600px) {
+  .reviews-content {
+    grid-template-columns: 300px;
+  }
+}

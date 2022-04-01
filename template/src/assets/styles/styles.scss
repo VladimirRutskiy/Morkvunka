@@ -1,0 +1,40 @@
+@import './normalize.scss';
+@import './reset';
+@import './main';
+
+
+  // Font
+  $mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+
+  // Size
+  $mainFontColor           : #101010;
+  $mainFontSize            : 18px;
+  $mainFontWeight          : 400;
+  $mainLineHeight          : 1.4;
+  
+  $desktopWidth            : 1280px;
+  $smDesktopWidth          : 1024px;
+  $tableWidth              : 768px;
+  $smTableWidth            : 640px;
+  $phoneWidth              : 480px;
+  $smPhoneWidth            : 320px;
+
+
+
+html {
+    line-height: $mainLineHeight;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    height: 100%;
+    @media screen and (max-width: $desktopWidth) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      font-size: 15px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      font-size: 14px;
+    }
+  }
+
+

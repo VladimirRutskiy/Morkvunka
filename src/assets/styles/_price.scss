@@ -1,0 +1,110 @@
+.price {
+  padding: 80px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+.price-content {
+  display: flex;
+  justify-content: space-between;
+}
+.price-item {
+  margin: 0 20px;
+  padding: 40px 32px;
+  border: 3px solid #ea560d;
+  border-radius: 15px;
+  text-align: center;
+  transform: translate(120%, 0);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 5px;
+    font-family: "Futura PT";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 155%;
+    color: #333333;
+  }
+  &__oldprice {
+    margin-bottom: 5px;
+    font-family: "Futura PT";
+    font-size: 20px;
+    line-height: 155%;
+    color: #333333;
+  }
+  &__newprice {
+    margin-bottom: 10px;
+    font-family: "Futura PT";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 155%;
+    color: #ea560d;
+  }
+  &__descrip {
+    text-align: left;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 155%;
+    color: #333333;
+  }
+  &__subtext {
+    margin-bottom: 20px;
+    color: #afafaf;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+    text-align: left;
+  }
+}
+.price-item.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+@media (max-width: 1080px) {
+  .price-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .price-item {
+    margin-bottom: 40px;
+    min-width: 280px;
+    &__img {
+      width: 100px;
+      height: 75px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 135%;
+      color: #333333;
+    }
+    &__oldprice {
+      font-size: 18px;
+      line-height: 135%;
+    }
+    &__newprice {
+      font-size: 18px;
+      line-height: 135%;
+      color: #ea560d;
+    }
+    &__descrip {
+      margin-bottom: 5px;
+      font-size: 16px;
+      line-height: 115%;
+    }
+    &__subtext {
+      margin-bottom: 40px;
+      font-size: 14px;
+      line-height: 95%;
+    }
+  }
+  .btn.btn-price {
+    font-size: 12px;
+    line-height: 115%;
+  }
+}

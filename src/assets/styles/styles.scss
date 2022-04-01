@@ -1,0 +1,159 @@
+@import "./normalize.scss";
+@import "./reset";
+@import "./header";
+@import "./main";
+@import "./why";
+@import "./video";
+@import "./team";
+@import "./schedule";
+@import "./events";
+@import "./gallery";
+@import "./price";
+@import "./reviews";
+
+// Font
+$mainFont: "Futura PT", Helvetica, Arial, sans-serif;
+$titleFont: "Chekharda", Helvetica, Arial, sans-serif;
+
+// Size
+$mainFontColor: #ea560d;
+$main-bgColor: #ffe1ab;
+$content-bgColor: #fff4dd;
+$mainFontSize: 18px;
+$mainFontWeight: 400;
+$mainLineHeight: 23px;
+
+$desktopWidth: 1280px;
+$smDesktopWidth: 1024px;
+$tableWidth: 768px;
+$smTableWidth: 640px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+$mainFont: "Futura PT", sans-serif;
+@font-face {
+  font-family: "Futura PT";
+  font-display: swap;
+  src: url("/src/assets/fonts/AnyConv.com__FuturaPT-Light.eot");
+  src: local("O"), url("/src/assets/fonts/FuturaPT-Light.woff") format("woff"),
+    url("/src/assets/fonts/FuturaPT-Light.ttf") format("truetype"),
+    url("/src/assets/fonts/FuturaPT-Light.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT";
+  font-display: swap;
+  src: url("/src/assets/fonts/FuturaPT-Bold.eot");
+  src: local("O"), url("/src/assets/fonts/FuturaPT-Bold.woff") format("woff"),
+    url("/src/assets/fonts/FuturaPT-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+$mainFont: "Chekharda", sans-serif;
+@font-face {
+  font-family: "Chekharda";
+  font-display: swap;
+  src: url("/src/assets/fonts/Chekharda-BoldItalic.eot");
+  src: local("O"),
+    url("/src/assets/fonts/Chekharda-BoldItalic.woff") format("woff"),
+    url("/src/assets/fonts/Chekharda-BoldItalic.ttf") format("truetype"),
+    url("/src/assets/fonts/Chekharda-BoldItalic.svg") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.h1-like {
+  font-family: Chekharda;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 43px;
+  color: #ea560d;
+  text-transform: uppercase;
+}
+.h2-like {
+  font-family: Chekharda;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: #ea560d;
+  margin-bottom: 60px;
+  transform: translate(0, -120%);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+}
+.h2-like.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.h3-like {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  color: #ea560d;
+  text-transform: uppercase;
+}
+.wrapper-text {
+  font-family: Futura PT;
+  font-size: 18px;
+  line-height: 28px;
+  color: #333333;
+}
+.btn {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #ea560d;
+  border: 2px solid #ea560d;
+  border-radius: 23px;
+  font-family: Chekharda;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.btn:hover {
+  background-color: #fff;
+  border: 2px solid #ea560d;
+  color: #ea560d;
+}
+@media (max-width: 1024px) {
+  .h1-like {
+    font-size: 28px;
+    line-height: 33px;
+  }
+  .h2-like {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .wrapper-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

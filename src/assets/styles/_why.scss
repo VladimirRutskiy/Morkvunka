@@ -1,0 +1,66 @@
+.why {
+  padding: 160px 0 50px;
+  background-color: #fff4dd;
+  position: relative;
+  overflow: hidden;
+}
+.why-content {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: auto auto auto;
+  position: relative;
+}
+
+.why::after {
+  content: "";
+  background-image: url(/src/assets/images/why-img.svg);
+  width: 260px;
+  height: 568px;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  z-index: 1;
+}
+.why-item {
+  text-align: center;
+  z-index: 2;
+  transform: translate(0, 50%);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__img:hover {
+    animation: shake 2s linear 0s infinite;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__text {
+    letter-spacing: 0.02em;
+  }
+  .why-item:hover {
+    &__img {
+      margin-bottom: 20px;
+    }
+  }
+}
+.why-item.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .why-content {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 480px) {
+  .why-content {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: auto;
+  }
+}

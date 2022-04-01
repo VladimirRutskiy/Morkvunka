@@ -1,0 +1,127 @@
+.team {
+  padding: 80px 0;
+  background-color: #fff4dd;
+  overflow: hidden;
+}
+.wrapper-team {
+  position: relative;
+}
+.slider {
+  max-width: 1159px;
+  margin: 0 auto;
+}
+.swiper-container {
+  overflow: hidden;
+}
+.slider-slide.swiper-slide {
+  margin-right: 40px;
+  opacity: 0;
+  transform: translateX(-1000px);
+  transition: all 1s ease 0.5s;
+}
+.slider-slide.active{
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.slider-slide__img {
+  margin-bottom: 20px;
+}
+.slider-slide__img img {
+  max-width: 100%;
+}
+.slider-slide__name {
+  font-family: Futura PT;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #333333;
+  margin-bottom: 9px;
+}
+.slider-slide__position {
+  font-family: Futura PT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #333333;
+}
+.team-btn__prev.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-color: #ffc656;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -5%;
+}
+.team-btn__prev.swiper-button-prev::after {
+  content: url(/src/assets/images/prev.svg);
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -5px;
+  left: 18px;
+}
+.team-btn__next.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background-color: #ffc656;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: -5%;
+}
+.team-btn__next.swiper-button-next::after {
+  content: url(/src/assets/images/next.svg);
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -5px;
+  right: 26px;
+}
+@media (max-width: 1340px) {
+  .slider {
+    max-width: 920px;
+  }
+  .slider-slide.swiper-slide {
+    max-width: 200px;
+  }
+  .team-btn__prev.swiper-button-prev {
+    top: 50%;
+    left: 5%;
+  }
+  .team-btn__next.swiper-button-next {
+    top: 50%;
+    right: 5%;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .slider {
+    max-width: 680px;
+  }
+  .team-btn__prev.swiper-button-prev {
+    top: 50%;
+    left: 1%;
+  }
+  .team-btn__next.swiper-button-next {
+    top: 50%;
+    right: 1%;
+  }
+}
+@media (max-width: 845px) {
+  .slider {
+    max-width: 440px;
+  }
+}
+@media (max-width: 560px) {
+  .slider {
+    max-width: 200px;
+  }
+}
