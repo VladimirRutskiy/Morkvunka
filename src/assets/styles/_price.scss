@@ -108,3 +108,8 @@
     line-height: 115%;
   }
 }
+@media (max-width: 768px) {
+  .price {
+    padding: 30px 0;
+  }
+}

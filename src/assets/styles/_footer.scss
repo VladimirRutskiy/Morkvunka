@@ -1,0 +1,127 @@
+.footer {
+  padding: 80px 0 30px 0;
+  background-color: #fff4dd;
+}
+.footer-content {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-info {
+  margin-right: 30px;
+  max-width: 286px;
+  padding-left: 30px;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  color: #333333;
+  position: relative;
+  li {
+    margin-bottom: 12px;
+  }
+}
+.tel {
+  display: inline-block;
+}
+.footer-info__tel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  a {
+    margin-right: 10px;
+    text-align: center;
+    img {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.btn.footer-btn {
+  display: block;
+  margin-top: 30px;
+}
+.footer-info__tel::before {
+  content: url(/src/assets/images/footer-phone.svg);
+  position: absolute;
+  left: -30px;
+}
+.footer-info__place::before {
+  content: url(/src/assets/images/footer-location.svg);
+  position: absolute;
+  left: 0px;
+}
+.footer-info__schedule::before {
+  content: url(/src/assets/images/footer-time.svg);
+  position: absolute;
+  left: 0px;
+}
+.footer-info__mail::before {
+  content: url(/src/assets/images/footer-planet.svg);
+  position: absolute;
+  left: 0px;
+}
+.footer-maps {
+  width: 560px;
+  height: 460px;
+}
+.footer-socialmedia {
+  display: flex;
+  justify-content: center;
+  a {
+    margin-right: 10px;
+  }
+}
+.footer-text {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Futura PT";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  color: #333333;
+}
+
+@media (max-width: 1080px) {
+  .footer-maps {
+    width: 560px;
+    height: 360px;
+  }
+}
+@media (max-width: 900px) {
+    .footer-content{
+        flex-direction: column-reverse;
+    }
+    .footer-maps{
+        margin-bottom: 30px;
+    }
+    .btn.footer-btn{
+        margin-right: 0;
+    }
+    .footer-info{
+        margin-right: 0;
+    }
+}
+@media (max-width: 768px){
+    .footer {
+        padding: 30px 0 30px 0;
+      }
+}
+@media (max-width: 600px) {
+    .footer-maps {
+      width: 360px;
+      height: 260px;
+    }
+  }
+  @media (max-width: 400px) {
+    .footer-maps {
+      width: 260px;
+      height: 260px;
+    }
+  }

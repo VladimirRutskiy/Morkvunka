@@ -179,7 +179,7 @@
     width: 400px;
   }
   .main-sale_wrapper {
-    top: -400px;
+    top: -355px;
     right: 0%;
   }
 }
@@ -192,10 +192,14 @@
     width: 400px;
   }
   .main-image {
-    max-width: 600px;
+    width: 600px;
+    padding-right: 10px;
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+  .wrapper-main::after {
+    display: none;
   }
 }
 @media (max-width: 640px) {
@@ -210,7 +214,7 @@
     right: 20px;
   }
   .main-sale_wrapper {
-    top: -420px;
+    top: -390px;
     right: 0%;
   }
 }
@@ -235,8 +239,7 @@
     right: -70px;
   }
   .main-image {
-    min-width: 300px;
-    right: -10%;
+    display: none;
   }
   .main-image::after {
     width: 75px;
@@ -244,7 +247,5 @@
     top: -390px;
     right: 40px;
   }
-  .wrapper-main::after {
-    display: none;
-  }
+  
 }

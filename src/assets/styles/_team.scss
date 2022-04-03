@@ -120,6 +120,11 @@
     max-width: 440px;
   }
 }
+@media (max-width: 768px) {
+  .team {
+    padding: 30px 0;
+  }
+}
 @media (max-width: 560px) {
   .slider {
     max-width: 200px;
